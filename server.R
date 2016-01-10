@@ -20,8 +20,8 @@ output$plt = renderPlot({
     api = gsub(' ', '+', tolower(raw_api)) # to lowercase, then replace spaces with plus signs
     start_date = as.character(input$start_date)
     end_date = as.character(input$end_date)
-    if(input$seriousness == 0) {seriousness = ""}
-    else{seriousness = paste0('+AND+serious:', as.character(input$seriousness))} # 1 for False, 2 for True according to FDA API}
+    if(input$seriousness == 0) {seriousness = ""} #no seriousness filter statement if keep all 
+    else{seriousness = paste0('+AND+serious:', as.character(input$seriousness))} # 1 for serious, 2 for non serious according to API
     data_url = paste0('http://api.fda.gov/drug/event.json?search=(patient.drug.medicinalproduct:',api,
                       '+OR+patient.drug.openfda.generic_name:',api,'+OR+patient.drug.openfda.substance_name:',api,
                       '+OR+patient.drug.openfda.brand_name:',api,')',seriousness,'+AND+receivedate:[',start_date,
