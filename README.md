@@ -1,0 +1,1 @@
+This is the a simple R Shiny web-app to interface with the OpenFDA website in real time.

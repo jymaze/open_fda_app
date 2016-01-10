@@ -1,1 +1,0 @@
-This is the code for the course project of the Developing Data Products class from Johns Hopkins University on Coursera.
