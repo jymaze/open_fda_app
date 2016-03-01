@@ -1,7 +1,7 @@
 name: open_fda_app
 account: jymaze
 server: shinyapps.io
-appId: 60466
-bundleId: 345948
+appId: 86328
+bundleId: 384025
 url: https://jymaze.shinyapps.io/open_fda_app/
-when: 1452267932.87867
+when: 1456804802.5492

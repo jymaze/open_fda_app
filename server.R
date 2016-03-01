@@ -25,7 +25,7 @@ output$plt = renderPlot({
     data_url = paste0('http://api.fda.gov/drug/event.json?search=(patient.drug.medicinalproduct:',api,
                       '+OR+patient.drug.openfda.generic_name:',api,'+OR+patient.drug.openfda.substance_name:',api,
                       '+OR+patient.drug.openfda.brand_name:',api,')',seriousness,'+AND+receivedate:[',start_date,
-                      '+TO+',end_date,']&count=patient.reaction.reactionmeddrapt.exact&limit=5000')
+                      '+TO+',end_date,']&count=patient.reaction.reactionmeddrapt.exact&limit=1000')
     tryCatch({
         raw_data = fromJSON(url(data_url))},
         error = function(e){
